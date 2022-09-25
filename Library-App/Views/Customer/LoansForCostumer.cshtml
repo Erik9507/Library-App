@@ -1,0 +1,50 @@
+﻿@model CustomerLoansViewModel
+
+@{
+    ViewData["Title"] = "LoansForCostumer";
+}
+
+<h1>Loans for @Model.customer.FirstName</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                <h4>Title</h4>
+            </td>
+            <td>
+                <h4>Author</h4>
+            </td>
+            <td>
+                <h4>Return Date</h4>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.loans)
+        {
+            <tr>
+                <td>
+                    @item.book.Title
+                </td>
+                <td>
+                    @item.book.Author
+                </td>
+                <td>
+                    @item.ReturnDate
+                </td>       
+                <td>
+                    <a asp-action="ReturnBook" asp-route-id="@item.LoanId">Return Book</a>
+                </td>
+            </tr>
+            
+        }
+    </tbody>
+</table>
+<a asp-action="Index">Back to List</a>
+
+
+
+
+
+

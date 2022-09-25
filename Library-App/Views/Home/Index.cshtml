@@ -1,0 +1,16 @@
+﻿@model Loan
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<link href="~/css/site.css" rel="stylesheet" />
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="popularBooks">
+    <h1>Popular Books</h1>
+    <a asp-controller ="Loan" asp-action="Create"><img src="~/Images/c-programming.jpg" /></a>
+    <a asp-controller ="Loan" asp-action="Create"><img src="~/Images/clean-code.jpg" /></a>
+    <a asp-controller ="Loan" asp-action="Create"><img src="~/Images/java-steg-for-steg.jpg" /></a>
+        
+        
+</div>
